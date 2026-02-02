@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menú | RestorApp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- GUARDS -->
+  <script type="module">
+    import { verificarSesion } from "../../js/guards/auth.guard.js";
+    import { verificarRol } from "../../js/guards/role.guard.js";
+    verificarSesion();
+    verificarRol("user");
+  </script>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Menú</h1>
+
+    <div class="space-x-2">
+      <a href="./profile.html" class="bg-gray-200 px-3 py-2 rounded">
+        Mi perfil
+      </a>
+      <a href="./orders.html" class="bg-blue-600 text-white px-3 py-2 rounded">
+        Mis pedidos
+      </a>
+      <button
+        id="btn-logout"
+        class="bg-red-600 text-white px-3 py-2 rounded"
+      >
+        Cerrar sesión
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- PRODUCTOS -->
+    <section
+      id="lista-productos"
+      class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6"
+    ></section>
+
+    <!-- CARRITO -->
+    <aside class="bg-white rounded-xl shadow p-4">
+      <h2 class="font-bold mb-4">Mi pedido</h2>
+
+      <ul id="lista-carrito" class="space-y-3 text-sm"></ul>
+
+      <p class="mt-4 font-semibold">
+        Total: <span id="total-carrito">$ 0.00</span>
+      </p>
+
+      <button
+        id="btn-vaciar-carrito"
+        class="w-full mt-3 bg-gray-200 py-2 rounded"
+      >
+        Vaciar carrito
+      </button>
+
+      <button
+        id="btn-confirmar-pedido"
+        class="w-full mt-3 bg-green-600 text-white py-2 rounded-lg"
+      >
+        Confirmar pedido
+      </button>
+    </aside>
+
+  </main>
+
+  <script type="module" src="../../js/user/menu.js"></script>
+</body>
+</html>

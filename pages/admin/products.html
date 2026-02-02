@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Productos | Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- GUARDS -->
+  <script type="module">
+    import { verificarSesion } from "../../js/guards/auth.guard.js";
+    import { verificarRol } from "../../js/guards/role.guard.js";
+
+    verificarSesion();
+    verificarRol("admin");
+  </script>
+
+  <header class="bg-white shadow p-4">
+    <h1 class="text-xl font-bold">Gestión de productos</h1>
+  </header>
+
+  <main class="p-6">
+
+    <form id="form-producto" class="bg-white p-4 rounded-xl shadow mb-6 space-y-2">
+      <input id="nombre" placeholder="Nombre" class="border p-2 w-full rounded" />
+      <input id="precio" type="number" placeholder="Precio" class="border p-2 w-full rounded" />
+      <input id="imagen" placeholder="imagen.jpg" class="border p-2 w-full rounded" />
+      <button class="bg-green-600 text-white px-4 py-2 rounded">
+        Crear producto
+      </button>
+    </form>
+
+    <div id="lista-productos" class="grid grid-cols-2 gap-4"></div>
+
+  </main>
+
+  <script type="module" src="../../js/admin/products.js"></script>
+</body>
+</html>

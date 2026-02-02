@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>RestorApp | Login</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <!-- Contenedor principal -->
+  <div class="bg-white w-full max-w-md p-8 rounded-xl shadow-lg">
+
+    <!-- Título -->
+    <h1 class="text-2xl font-bold text-center mb-6">
+      Bienvenido a RestorApp
+    </h1>
+
+    <!-- FORMULARIO LOGIN -->
+    <form id="form-login" class="space-y-4">
+
+      <div>
+        <label class="block text-sm font-medium mb-1">
+          Correo electrónico
+        </label>
+        <input
+          id="login-email"
+          type="email"
+          placeholder="correo@ejemplo.com"
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">
+          Contraseña
+        </label>
+        <input
+          id="login-password"
+          type="password"
+          placeholder="********"
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Iniciar sesión
+      </button>
+    </form>
+
+    <!-- Separador -->
+    <div class="my-6 text-center text-sm text-gray-500">
+      ¿No tienes cuenta?
+    </div>
+
+    <!-- FORMULARIO REGISTRO -->
+    <form id="form-registro" class="space-y-4">
+
+      <div>
+        <label class="block text-sm font-medium mb-1">
+          Nombre
+        </label>
+        <input
+          id="registro-nombre"
+          type="text"
+          placeholder="Tu nombre"
+          class="w-full border rounded-lg px-3 py-2"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">
+          Correo electrónico
+        </label>
+        <input
+          id="registro-email"
+          type="email"
+          placeholder="correo@ejemplo.com"
+          class="w-full border rounded-lg px-3 py-2"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">
+          Contraseña
+        </label>
+        <input
+          id="registro-password"
+          type="password"
+          placeholder="********"
+          class="w-full border rounded-lg px-3 py-2"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+      >
+        Crear cuenta
+      </button>
+    </form>
+
+    <!-- Mensaje de error -->
+    <p id="mensaje-error" class="text-red-500 text-sm mt-4 text-center hidden">
+      Error
+    </p>
+
+  </div>
+
+  <!-- JS -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

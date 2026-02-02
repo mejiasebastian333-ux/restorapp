@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil | RestorApp</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- GUARDS -->
+  <script type="module">
+    import { verificarSesion } from "../../js/guards/auth.guard.js";
+    import { verificarRol } from "../../js/guards/role.guard.js";
+
+    verificarSesion();
+    verificarRol("user");
+  </script>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Mi perfil</h1>
+
+    <a
+      href="./menu.html"
+      class="bg-blue-600 text-white px-4 py-2 rounded-lg"
+    >
+      Volver
+    </a>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="p-6 max-w-md mx-auto">
+
+    <form
+      id="form-perfil"
+      class="bg-white p-6 rounded-xl shadow space-y-4"
+    >
+
+      <div>
+        <label class="block text-sm font-medium">Nombre</label>
+        <input
+          id="nombre"
+          type="text"
+          class="w-full border rounded-lg px-3 py-2"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Correo</label>
+        <input
+          id="correo"
+          type="email"
+          class="w-full border rounded-lg px-3 py-2"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-green-600 text-white py-2 rounded-lg"
+      >
+        Guardar cambios
+      </button>
+
+    </form>
+
+    <p
+      id="mensaje"
+      class="text-center text-green-600 mt-4 hidden"
+    >
+      Perfil actualizado correctamente
+    </p>
+
+  </main>
+
+  <script type="module" src="../../js/user/profile.js"></script>
+</body>
+</html>

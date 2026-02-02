@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mis pedidos | RestorApp</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- GUARDS -->
+  <script type="module">
+    import { verificarSesion } from "../../js/guards/auth.guard.js";
+    import { verificarRol } from "../../js/guards/role.guard.js";
+
+    verificarSesion();
+    verificarRol("user");
+  </script>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Mis pedidos</h1>
+
+    <a
+      href="./menu.html"
+      class="bg-blue-600 text-white px-4 py-2 rounded-lg"
+    >
+      Volver al menú
+    </a>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="p-6">
+
+    <!-- Lista de pedidos -->
+    <section id="lista-pedidos" class="space-y-4">
+      <!-- Pedidos dinámicos -->
+    </section>
+
+    <!-- Mensaje sin pedidos -->
+    <p
+      id="mensaje-vacio"
+      class="text-center text-gray-500 mt-10 hidden"
+    >
+      Aún no tienes pedidos realizados.
+    </p>
+
+  </main>
+
+  <!-- JS -->
+  <script type="module" src="../../js/user/orders.js"></script>
+</body>
+</html>

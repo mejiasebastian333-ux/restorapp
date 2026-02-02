@@ -1,0 +1,223 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin Principal",
+      "email": "admin@restorapp.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Alex",
+      "email": "alex@user.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "6e3b",
+      "name": "Sebas",
+      "email": "sebas@user.com",
+      "password": "sebas123",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Hamburguesa clásica de carne",
+      "description": "Hamburguesa de carne premium con queso cheddar, lechuga y tomate.",
+      "price": 8.99,
+      "category": "hamburgers",
+      "image": "burger-classic.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Tocino doble fundido",
+      "description": "Doble carne, tocino crujiente y queso fundido.",
+      "price": 12.5,
+      "category": "hamburgers",
+      "image": "burger-bacon.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Papas fritas doradas",
+      "description": "Papas recién cortadas fritas a la perfección.",
+      "price": 3.99,
+      "category": "sides",
+      "image": "fries.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cola Zero",
+      "description": "Bebida fría sin azúcar.",
+      "price": 2.5,
+      "category": "drinks",
+      "image": "cola-zero.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Caja de donas",
+      "description": "Donas glaseadas y escarchadas surtidas.",
+      "price": 6,
+      "category": "desserts",
+      "image": "donuts.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Rebanada de pepperoni",
+      "description": "Pizza estilo New York con doble pepperoni.",
+      "price": 4.5,
+      "category": "pizza",
+      "image": "pizza-pepperoni.jpg"
+    },
+    {
+      "id": "46a7",
+      "name": "cola original",
+      "price": 2,
+      "image": "cola-original.png",
+      "description": ""
+    }
+  ],
+  "orders": [
+    {
+      "id": 1024,
+      "userId": 2,
+      "items": [
+        {
+          "productId": 1,
+          "name": "Hamburguesa clásica de carne",
+          "quantity": 2,
+          "price": 8.99
+        },
+        {
+          "productId": 3,
+          "name": "Papas fritas doradas",
+          "quantity": 1,
+          "price": 3.99
+        }
+      ],
+      "status": "preparing",
+      "subtotal": 21.97,
+      "tax": 1.76,
+      "total": 23.73,
+      "date": "2026-01-30"
+    },
+    {
+      "id": 1023,
+      "userId": 2,
+      "items": [
+        {
+          "productId": 6,
+          "name": "Rebanada de pepperoni",
+          "quantity": 2,
+          "price": 4.5
+        }
+      ],
+      "status": "delivered",
+      "subtotal": 9,
+      "tax": 0.72,
+      "total": 9.72,
+      "date": "2026-01-29"
+    },
+    {
+      "id": 1022,
+      "userId": 2,
+      "items": [
+        {
+          "productId": 2,
+          "name": "Tocino doble fundido",
+          "quantity": 1,
+          "price": 12.5
+        },
+        {
+          "productId": 4,
+          "name": "Cola Zero",
+          "quantity": 1,
+          "price": 2.5
+        }
+      ],
+      "status": "cancelled",
+      "subtotal": 15,
+      "tax": 1.2,
+      "total": 16.2,
+      "date": "2026-01-28"
+    },
+    {
+      "id": "2a19",
+      "userId": 2,
+      "items": [
+        {
+          "productId": 1,
+          "name": "Hamburguesa clásica de carne",
+          "price": 8.99,
+          "quantity": 1
+        },
+        {
+          "productId": 3,
+          "name": "Papas fritas doradas",
+          "price": 3.99,
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "name": "Cola Zero",
+          "price": 2.5,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "subtotal": 15.48,
+      "tax": 1.2384000000000002,
+      "total": 16.7184,
+      "date": "2026-02-02"
+    },
+    {
+      "id": "9e12",
+      "userId": "6e3b",
+      "items": [
+        {
+          "productId": 6,
+          "name": "Rebanada de pepperoni",
+          "price": 4.5,
+          "quantity": 4
+        },
+        {
+          "productId": 3,
+          "name": "Papas fritas doradas",
+          "price": 3.99,
+          "quantity": 2
+        },
+        {
+          "productId": 5,
+          "name": "Caja de donas",
+          "price": 6,
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "name": "Cola Zero",
+          "price": 2.5,
+          "quantity": 1
+        },
+        {
+          "productId": 1,
+          "name": "Hamburguesa clásica de carne",
+          "price": 8.99,
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "name": "Tocino doble fundido",
+          "price": 12.5,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "subtotal": 55.970000000000006,
+      "tax": 4.477600000000001,
+      "total": 60.44760000000001,
+      "date": "2026-02-02"
+    }
+  ]
+}

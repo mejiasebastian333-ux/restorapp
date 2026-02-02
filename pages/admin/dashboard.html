@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Admin</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- GUARDS -->
+  <script type="module">
+    import { verificarSesion } from "../../js/guards/auth.guard.js";
+    import { verificarRol } from "../../js/guards/role.guard.js";
+
+    verificarSesion();
+    verificarRol("admin");
+  </script>
+
+  <!-- HEADER -->
+<header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Dashboard Admin</h1>
+
+    <div class="space-x-2">
+        <a href="./orders.html" class="bg-blue-600 text-white px-3 py-2 rounded">
+            Pedidos
+        </a>
+        <a href="./products.html" class="bg-green-600 text-white px-3 py-2 rounded">
+            Productos
+        </a>
+        <button
+            id="btn-logout"
+            class="bg-red-600 text-white px-3 py-2 rounded"
+        >
+            Cerrar sesión
+        </button>
+    </div>
+</header>
+
+
+  <!-- MÉTRICAS -->
+  <main class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-white p-4 rounded-xl shadow">
+      <h3 class="text-gray-500">Total pedidos</h3>
+      <p id="total-pedidos" class="text-2xl font-bold">0</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-xl shadow">
+      <h3 class="text-gray-500">Pedidos pendientes</h3>
+      <p id="pedidos-pendientes" class="text-2xl font-bold">0</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-xl shadow">
+      <h3 class="text-gray-500">Total del día</h3>
+      <p id="total-dia" class="text-2xl font-bold">$ 0.00</p>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script type="module" src="../../js/admin/dashboard.js"></script>
+</body>
+</html>
